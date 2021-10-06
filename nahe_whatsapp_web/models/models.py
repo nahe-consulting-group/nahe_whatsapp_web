@@ -34,7 +34,7 @@ class nahe_whatsapp_web_so(models.Model):
                    'url': message
             }
 class nahe_whatsapp_web_invoice(models.Model):
-     _inherit = 'account.move'
+     _inherit = 'account.invoice'
      _description = 'nahe_whatsapp_web.nahe_whatsapp_web_account_move'
      def action_sendwsfactura(self, default=None):
           WS_MESSAGE = self.env['ir.config_parameter'].get_param('nahe_whatsapp_web.MENSAJEINVOICE','')
