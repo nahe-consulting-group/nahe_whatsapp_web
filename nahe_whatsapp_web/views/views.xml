@@ -1,0 +1,48 @@
+<odoo>
+  <data>
+    <record model="ir.ui.view" id="nahe_whatsapp_web_sale_order_form_boton">
+        <field name="name">nahe.whatsapp.web.sale.order.form.listo</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+        <xpath expr="/form/header/button[@name='action_cancel']" position= "after">
+            <button name="action_sendwslisto" type="object" string="whatsapp listo para retirar" states="sale,done"/>
+        </xpath>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="nahe_whatsapp_web_account_move_form_boton">
+        <field name="name">nahe.whatsapp.web.account.move.form.factura</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form"/>
+        <field name="arch" type="xml">
+        <xpath expr="/form/header/button[@name='action_reverse']" position= "after">
+            <button name="action_sendwsfactura" type="object" string="whatsapp factura disponible" states="posted"/>
+        </xpath>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="nahe_whatsapp_web_purchase_order_form_boton">
+        <field name="name">nahe.whatsapp.web.purchase.order.form.compra</field>
+        <field name="model">purchase.order</field>
+        <field name="inherit_id" ref="purchase.purchase_order_form"/>
+        <field name="arch" type="xml">
+        <xpath expr="/form/header/button[@name='button_cancel']" position= "after">
+            <button name="action_sendwscompra" type="object" string="whatsapp a proveedor" states="sent,purchase,done"/>
+        </xpath>
+        </field>
+    </record>
+    <record id="nahe_whatsapp_web_config_MENSAJESO" model="ir.config_parameter">
+        <field name="key">nahe_whatsapp_web.MENSAJESO</field>
+        <field name="value">https://wa.me/#NUMERO?text=Buen%20dia,%20#CLIENTE%20su%20pedido%20#ORDEN%20esta%20listo%20para%20retirar.%20Total%20#MONTO</field>
+        <!--MENSAJE GENERICO https://wa.me/5492235410928?text=Buen%20dia,%20necesito%20hacer%20una%20consulta
+        https://wa.me/#NUMERO?text=Buen%20dia,%20#CLIENTE%20su%20pedido%20#PEDIDO%20esta%20listo%20para%20retirar.%20Total%20#MONTO-->
+    </record>
+    <record id="nahe_whatsapp_web_config_MENSAJEINVOICE" model="ir.config_parameter">
+        <field name="key">nahe_whatsapp_web.MENSAJEINVOICE</field>
+        <field name="value">https://wa.me/#NUMERO?text=Buen%20dia,%20#CLIENTE%20su%20factura%20#FACTURA%20esta%20disponible%20para%20abonar.%20Total%20#MONTO</field>
+    </record>
+    <record id="nahe_whatsapp_web_config_MENSAJEPURCHASE" model="ir.config_parameter">
+        <field name="key">nahe_whatsapp_web.MENSAJEPURCHASE</field>
+        <field name="value">https://wa.me/#NUMERO?text=Buen%20dia,%20#PROVEEDOR%20nos%20comunicamos%20por%20este%pedido%20que%20adjuntamos</field>
+    </record>
+  </data>
+</odoo>
