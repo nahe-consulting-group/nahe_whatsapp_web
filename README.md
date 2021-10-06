@@ -6,4 +6,4 @@ Abre pestaña nueva para mandar mensajes prearmados por whatsapp web desde odoo
         3º en parámetros del sistema se pone el mensaje predeterminado generico. Respetando los datos con # se puede alterar el mensaje.
         4º Ahora tenemos el boton en las ordenes de venta, facturas y ordenes de compra que ayuda a mandar el mensaje por whatsappweb de forma simple.
         5º Se puede modificar facilmente el codigo del modulo para generar más botones en el sistema.
-Testeado en odoo 13
+Testeado en odoo 12
