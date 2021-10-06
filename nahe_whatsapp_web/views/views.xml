@@ -10,13 +10,13 @@
         </xpath>
         </field>
     </record>
-    <record model="ir.ui.view" id="nahe_whatsapp_web_account_move_form_boton">
-        <field name="name">nahe.whatsapp.web.account.move.form.factura</field>
-        <field name="model">account.move</field>
-        <field name="inherit_id" ref="account.view_move_form"/>
+    <record model="ir.ui.view" id="nahe_whatsapp_web_account_invoice_form_boton">
+        <field name="name">nahe.whatsapp.web.account.invoice.form.factura</field>
+        <field name="model">account.invoice</field>
+        <field name="inherit_id" ref="account.invoice_form"/>
         <field name="arch" type="xml">
-        <xpath expr="/form/header/button[@name='action_reverse']" position= "after">
-            <button name="action_sendwsfactura" type="object" string="whatsapp factura disponible" states="posted"/>
+        <xpath expr="/form/header/button[@name='action_invoice_sent']" position= "after">
+            <button name="action_sendwsfactura" type="object" string="whatsapp factura disponible" states="draft,open,in_payment"/>
         </xpath>
         </field>
     </record>
