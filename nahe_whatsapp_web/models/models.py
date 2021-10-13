@@ -43,6 +43,7 @@ class nahe_whatsapp_web_invoice(models.Model):
                message = WS_MESSAGE.replace('#CLIENTE',rec.partner_id.display_name)
                message = message.replace('#MONTO',str(round(rec.amount_total,0)))
                message = message.replace('#FACTURA',rec.name)
+               #message = message.replace('#FACTURA',rec.number) la localizacion argentina usa name lo cambio por number que usan en españa
                num_cel = rec.partner_id.mobile
                if num_cel:
                     num_cel = num_cel.replace('+','')
