@@ -25,7 +25,7 @@ class nahe_whatsapp_web_so(models.Model):
                          #LIMPIAMOS LOS ESPACIOS POR LAS DUDAS
                          message = message.replace(' ','%20')
                     else:
-                         raise ValidationError('Nro de telefono mal formateado whatsapp necesita codigo de pais en el numero %s'%(rec.partner_id.mobile))
+                         raise ValidationError('Nro de telefono mal formateado whatsapp necesita codigo de pais en el numero %s'%(rec.mobile))
                else:
                     raise ValidationError('El cliente no tiene numero de celular agendado')
           return {
