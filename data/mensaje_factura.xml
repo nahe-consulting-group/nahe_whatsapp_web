@@ -1,0 +1,8 @@
+<odoo>
+  <data> 
+	<record id="nahe_whatsapp_web_config_MENSAJEINVOICE" model="ir.settings">
+	     <field name="key">nahe_whatsapp_web.MENSAJEINVOICE</field>
+	     <field invoice_message="value">https://wa.me/#NUMERO?text=Buen%20dia,%20#CLIENTE%20su%20factura%20#FACTURA%20esta%20disponible%20para%20abonar.%20Total%20#MONTO</field>
+	</record>
+  </data>
+</odoo>	 	    
