@@ -1,8 +1,8 @@
 <odoo>
   <data>
-		<record id="nahe_whatsapp_web_config_MENSAJEPURCHASE" model="ir.config_parameter">
+		<record id="nahe_whatsapp_web_config_MENSAJEPURCHASE" model="ir.settings">
 		    <field name="key">nahe_whatsapp_web.MENSAJEPURCHASE</field>
-		    <field name="value">https://wa.me/#NUMERO?text=Buen%20dia,%20#PROVEEDOR%20nos%20comunicamos%20por%20este%pedido%20que%20adjuntamos</field>
+		    <field purchase_message="value">https://wa.me/#NUMERO?text=Buen%20dia,%20#PROVEEDOR%20nos%20comunicamos%20por%20este%pedido%20que%20adjuntamos</field>
 		</record>
   </data>
 </odoo>		    
