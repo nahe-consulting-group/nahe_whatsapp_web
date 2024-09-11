@@ -1,14 +1,14 @@
-<oddo>
-	<data>
-		<record model="ir.ui.view" id="nahe_whatsapp_web_purchase_order_form_boton">
-        <field name="name">nahe.whatsapp.web.purchase.order.form.compra</field>
-        <field name="model">purchase.order</field>
-        <field name="inherit_id" ref="purchase.purchase_order_form"/>
-        <field name="arch" type="xml">
-        <xpath expr="/form/header/button[@name='button_cancel']" position= "after">
-            <button name="action_sendwscompra" type="object" string="whatsapp a proveedor" states="sent,purchase,done"/>
-        </xpath>
-        </field>
-    	</record>
+<odoo>
     <data>
-<odoo>    	
+        <record model="ir.ui.view" id="nahe_whatsapp_web_purchase_order_form_boton">
+            <field name="name">nahe.whatsapp.web.purchase.order.form.compra</field>
+            <field name="model">purchase.order</field>
+            <field name="inherit_id" ref="purchase.purchase_order_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="/form/header/button[@name='button_cancel']" position="after">
+                    <button name="action_sendwscompra" type="object" string="whatsapp a proveedor" states="sent,purchase,done"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

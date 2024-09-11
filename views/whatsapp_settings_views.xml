@@ -1,4 +1,5 @@
 <odoo>
+    <!-- Vista del formulario -->
     <record id="view_whatsapp_settings_form" model="ir.ui.view">
         <field name="name">whatsapp.settings.form</field>
         <field name="model">whatsapp.settings</field>
@@ -6,7 +7,7 @@
             <form string="Configuración de WhatsApp">
                 <sheet>
                     <group>
-                        <field name="name"/>
+                        <field name="name" readonly="1"/>
                     </group>
                     <group string="Mensajes">
                         <field name="sale_message"/>
@@ -18,14 +19,20 @@
         </field>
     </record>
 
+    <!-- Acción para mostrar siempre el primer registro -->
     <record id="action_whatsapp_settings" model="ir.actions.act_window">
         <field name="name">Configuración de WhatsApp</field>
         <field name="res_model">whatsapp.settings</field>
         <field name="view_mode">form</field>
         <field name="view_id" ref="view_whatsapp_settings_form"/>
         <field name="target">current</field>
+        <field name="context">{'default_name': 'Configuración de WhatsApp'}</field>
+        <field name="domain">[]</field>
+        <field name="limit">1</field>
     </record>
 
+    <!-- Menú -->
     <menuitem id="menu_whatsapp_settings" name="WhatsApp"
-              parent="base.menu_settings" action="action_whatsapp_settings"/>
+              parent="base.menu_administration" action="action_whatsapp_settings"/>
+
 </odoo>

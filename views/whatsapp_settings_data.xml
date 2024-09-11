@@ -1,0 +1,11 @@
+<odoo>
+  <data noupdate="1">
+      <!-- Registro por defecto para la configuración de WhatsApp -->
+      <record id="whatsapp_settings_default" model="whatsapp.settings">
+        <field name="name">Configuración de WhatsApp</field>
+        <field name="sale_message">Buen%20dia,%20#CLIENTE%20su%20pedido%20#ORDEN%20esta%20listo%20para%20retirar.%20Total%20#MONTO</field>
+        <field name="invoice_message">Buen%20dia,%20#CLIENTE%20su%20factura%20#FACTURA%20esta%20disponible%20para%20abonar.%20Total%20#MONTO</field>
+        <field name="purchase_message">Buen%20dia,%20#PROVEEDOR%20nos%20comunicamos%20por%20este%pedido%20que%20adjuntamos</field>
+      </record>
+  </data>
+</odoo>
