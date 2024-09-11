@@ -8,7 +8,7 @@
     "website": "https://nahe.com.ar/",
     "license": "AGPL-3",
     "category": "Extra Tools",
-    "version": "16.0.2.2.0",
+    "version": "16.0.3.3.0",
     "development_status": "Production/Stable",
     "application": False,
     "installable": True,

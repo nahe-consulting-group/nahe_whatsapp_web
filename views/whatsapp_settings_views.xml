@@ -19,17 +19,17 @@
         </field>
     </record>
 
-    <!-- Acción para mostrar siempre el primer registro -->
+
     <record id="action_whatsapp_settings" model="ir.actions.act_window">
         <field name="name">Configuración de WhatsApp</field>
         <field name="res_model">whatsapp.settings</field>
         <field name="view_mode">form</field>
         <field name="view_id" ref="view_whatsapp_settings_form"/>
         <field name="target">current</field>
-        <field name="context">{'default_name': 'Configuración de WhatsApp'}</field>
-        <field name="domain">[]</field>
-        <field name="limit">1</field>
+        <!-- Establecer el res_id para abrir el registro con id = 1 -->
+        <field name="res_id" eval="1"/>
     </record>
+
 
     <!-- Menú -->
     <menuitem id="menu_whatsapp_settings" name="WhatsApp"
